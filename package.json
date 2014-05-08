@@ -1,11 +1,30 @@
 {
   "name": "chaoserver",
   "version": "0.0.1",
-  "description": "this is a web server which is based on connect",
+  "description": "a server based on connect, tiny, easy to use",
   "main": "server.js",
+  "dependencies": {
+    "connect": "^2.15.0",
+    "morgan": "^1.0.1"
+  },
+  "devDependencies": {},
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zcfrank1st/chaoserver.git"
+  },
+  "keywords": [
+    "nodejs",
+    "server",
+    "tiny"
+  ],
   "author": "zcfrank1st",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zcfrank1st/chaoserver/issues"
+  },
+  "homepage": "https://github.com/zcfrank1st/chaoserver"
 }
