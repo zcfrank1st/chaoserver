@@ -1,0 +1,143 @@
+<div class="navbar navbar-default" id="navbar">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('navbar', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <div class="navbar-container" id="navbar-container">
+        <div class="navbar-header pull-left">
+            <a href="http://beidou.data.dp/" class="navbar-brand">
+                <small>
+                    DataDP
+                </small>
+            </a><!-- /.brand -->
+        </div>
+        <!-- /.navbar-header -->
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" target="_self" class="dropdown-toggle" data-toggle="dropdown">调度系统<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://data.dp/halley/task-monitor.html">调度监控</a></li>
+                        <li><a href="http://data.dp/halley/task-view.html">查看任务</a></li>
+                        <li><a href="http://data.dp/halley/task-add.html">新增任务</a></li>
+                        <li><a href="http://data.dp/halley/autoetl-query.html">AutoETL</a></li>
+                        <li><a href="http://data.dp/halley/hive-tool.html">Hive建表工具</a></li>
+                        <li><a href="http://data.dp/halley/slaJob-status.html">SLA实时监控</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" target="_self" class="dropdown-toggle" data-toggle="dropdown">权限系统 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="" target="_self" tabindex="-1">数据仓库权限</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://data.dp/pluto/aclview.html">用户组账号查看</a></li>
+                                <li><a href="http://data.dp/pluto/aclmanager.html">用户组账号管理</a></li>
+                                <li><a href="http://data.dp/pluto/acl2k2.html">用户组权限申请</a></li>
+                                <li><a href="http://data.dp/pluto/acl2hive.html">Hive web client登录</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="" target="_self" tabindex="-1">数据产品权限</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://data.dp/pluto/aclsysaccess.html">系统接入</a></li>
+                                <li><a href="http://data.dp/pluto/aclauthcodemng.html">授权码管理</a></li>
+                                <li><a href="http://data.dp/pluto/aclprodadmin.html">产品管理员管理</a></li>
+                                <li><a href="http://data.dp/pluto/aclrolecreate.html">角色组创建</a></li>
+                                <li><a href="http://data.dp/pluto/aclrolemanage.html">角色组管理</a></li>
+                                <li><a href="http://data.dp/pluto/aclprodgrant.html">产品授权</a></li>
+                                <li><a href="http://data.dp/pluto/aclroleview.html">产品权限查看</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" target="_self" class="dropdown-toggle" data-toggle="dropdown">主数据系统<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://data.dp/mercury/indicator.html">指标字典</a></li>
+                        <li><a href="http://data.dp/mercury/datalist.html">数据仓库表信息</a></li>
+                        <li><a href="http://data.dp/mercury/model-display.html">数据仓库模型信息</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" target="_self" class="dropdown-toggle" data-toggle="dropdown">数据产品<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="" target="_self">OLAP</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="" target="_self" tabindex="-1">运营工具</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://andromeda.data.dp/opview.html">运营工具查询</a></li>
+                                <li><a href="http://andromeda.data.dp/ophandle.html">运营工具编辑</a></li>
+                                <li><a href="http://andromeda.data.dp/opapply.html">运营工具申请</a></li>
+                                <li><a href="http://andromeda.data.dp/opemployee.html">运营工具管理</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://data.dp/pluto/acl2hive.html">HiveWeb</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="" target="_self" tabindex="-1">固化查询</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://beidou.data.dp/nova.html">固化查询</a></li>
+                                <li><a href="http://beidou.data.dp/adhoc-designer.html">固化查询配置</a></li>
+                                <li><a href="#" target="_self">固化查询下载中心</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="http://virgo.data.dp/">数据质量</a></li>
+                <li><a href="http://data.dp/windrunner/galaxy-app-store.html">插件中心</a></li>
+                <li class="dropdown">
+                    <a href="#" target="_self" class="dropdown-toggle" data-toggle="dropdown">北斗平台<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://beidou.data.dp/report.html">报表查看</a></li>
+                        <li><a href="http://beidou.data.dp/page.html">Dashboard</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="" target="_self" tabindex="-1">配置管理</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://data.dp/mercury/indicator-engine.html">指标配置</a></li>
+                                <li><a href="http://data.dp/mercury/atom-view.html">指标查看</a></li>
+                                <li><a href="http://beidou.data.dp/report-designer.html">报表配置</a></li>
+                                <li><a href="http://data.dp/halley/mail-config.html?systemId=1">邮件配置</a></li>
+                                <li><a href="http://beidou.data.dp/chart-designer.html">图标配置</a></li>
+                                <li><a href="http://beidou.data.dp/page-designer.html">页面配置</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-header -->
+
+
+        <div class="navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <li class="light-blue">
+                    <a data-toggle="dropdown" href="#" target="_self" class="dropdown-toggle">
+                        <img class="nav-user-photo" src="./libs/ace/images/gallery/image-1.jpg"
+                             alt="Jason's Photo"/>
+                                <span class="user-info">
+                                    <small>欢迎,</small>
+                                    <div ng-bind="username"></div>
+                                </span>
+
+                        <i class="icon-caret-down"></i>
+                    </a>
+
+                    <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <li>
+                            <a href="http://sys.www.dianping.com/index.aspx">
+                                <i class="icon-off"></i>
+                                退出
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- /.ace-nav -->
+        </div>
+        <!-- /.navbar-header -->
+    </div>
+    <!-- /.container -->
+</div>

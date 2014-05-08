@@ -1,4 +1,6 @@
 module.exports = {
   port: 3000,
-  host: 'localhost'
-}
+  ip: '127.0.0.1',
+
+  webroot: 'webapp/'
+};

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="./libs/ace/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./libs/ace/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+  <!-- ace styles -->
+  <link rel="stylesheet" href="./libs/ace/css/ace.min.css" />
+  <link rel="stylesheet" href="./libs/ace/css/ace-rtl.min.css" />
+  <link rel="stylesheet" href="./libs/ace/css/ace-skins.min.css" />
+
+  <!--    <link rel="stylesheet" href="./lib/css/jquery-ui-1.10.3.full.min.css" />-->
+  <link rel="stylesheet" href="./resources/css/navbar-multi-dropdown.css">
+</head>
+
+<body ng-app="onePiece">
+  <div datadp-navbar></div>
+
+  <div class="main-container" id="main-container">
+    <div class="main-container-inner">
+      <a class="menu-toggler" id="menu-toggler">
+        <span class="menu-text"></span>
+      </a>
+
+      <div class="sidebar" id="sidebar">
+        <script type="text/javascript">
+          try {
+            ace.settings.check('sidebar', 'fixed')
+          } catch (e) {}
+        </script>
+
+        <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+          <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+            <label class="label label-yellow label-lg arrowed arrowed-right">XXXX</label>
+          </div>
+        </div>
+        <!-- #sidebar-shortcuts -->
+
+
+        <ul class="nav nav-list">
+          <li>
+            <a href="#" target="_self">
+              <i class="icon-search"></i>
+              <span class="menu-text"> XXXX </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_self">
+              <i class="icon-copy"></i>
+              <span class="menu-text"> XXXX </span>
+            </a>
+          </li>
+        </ul>
+        <!-- /.nav-list -->
+
+        <div class="sidebar-collapse" id="sidebar-collapse">
+          <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+        </div>
+
+        <script type="text/javascript">
+          try {
+            ace.settings.check('sidebar', 'collapsed')
+          } catch (e) {}
+        </script>
+      </div>
+
+      <div class="main-content">
+        <div class="breadcrumbs" id="breadcrumbs">
+          <script type="text/javascript">
+            try {
+              ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {}
+          </script>
+
+          <ul class="breadcrumb">
+            <li>
+              <i class="icon-home home-icon"></i>
+              <a href="#" target="_self">XXXX</a>
+            </li>
+            <li class="active">XXXX</li>
+          </ul>
+          <!-- .breadcrumb -->
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./libs/ace/js/ace-extra.min.js"></script>
+  <script src="./libs/ace/js/jquery-2.0.3.min.js"></script>
+
+  <script type="text/javascript">
+    if ("ontouchend" in document) document.write("<script src='./libs/ace/js/jquery.mobile.custom.min.js'>" + "<" + "script>");
+  </script>
+  <script src="./libs/ace/js/bootstrap.min.js"></script>
+  <script src="./libs/ace/js/typeahead-bs2.min.js"></script>
+
+  <!-- page specific plugin scripts -->
+  <!--[if lte IE 8]>
+<script src="../libs/ace/1.2/js/excanvas.min.js"></script>
+<![endif]-->
+
+  <script src="./libs/ace/js/jquery-ui-1.10.3.full.min.js"></script>
+  <script src="./libs/ace/js/jquery.ui.touch-punch.min.js"></script>
+  <script src="./libs/ace/js/jquery.slimscroll.min.js"></script>
+  <script src="./libs/ace/js/jquery.easy-pie-chart.min.js"></script>
+  <script src="./libs/ace/js/jquery.sparkline.min.js"></script>
+  <script src="./libs/ace/js/flot/jquery.flot.min.js"></script>
+  <script src="./libs/ace/js/flot/jquery.flot.pie.min.js"></script>
+  <script src="./libs/ace/js/flot/jquery.flot.resize.min.js"></script>
+  <script src="./libs/ace/js/jquery.dataTables.min.js"></script>
+  <script src="./libs/ace/js/jquery.dataTables.bootstrap.js"></script>
+
+
+  <!-- ace scripts -->
+  <script src="./libs/ace/js/ace-elements.min.js"></script>
+  <script src="./libs/ace/js/ace.min.js"></script>
+
+  <!--  angular  -->
+  <script src="./libs/angular/angular.min.js"></script>
+  <script src="./libs/angular/angular-route.min.js"></script>
+  <script src="./libs/angular/angular-cookies.min.js"></script>
+
+  <script src="./resources/js/app.js"></script>
+  <script src="./resources/js/router.js"></script>
+  <script src="./resources/js/util.js"></script>
+  <script src="./resources/js/controller.js"></script>
+  <script src="./resources/js/directive.js"></script>
+</body>
+
+</html>
+

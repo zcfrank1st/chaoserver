@@ -1,0 +1,1 @@
+angular.module('onePiece', ['appCtrl', 'appDirect', 'appRoute']);
