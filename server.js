@@ -2,26 +2,55 @@ var server = require('connect');
 var logger = require('morgan');
 var fs = require('fs');
 var serveStatic = require('serve-static');
+var merge = require('utils-merge');
+var options = require('./options');
 
-var CONSTANTS = require('./constants');
-var self_modules = require('./modules');
+var s = server();
+var traits = {};
 
+traits.rest = function rest(method, path, fn) {
+  // TODO 处理method
+  s.use(path, fn);
+  return s;
+};
 
-var host = CONSTANTS.ip || '0.0.0.0';
+traits.plus = function plus(fn) {
+  s.use(fn);
+  return s;
+};
 
-server()
-// init
-.use(logger({stream: fs.createWriteStream('./server.log', {'flags': 'a'})}))
-.use(logger('dev'))
-.use(serveStatic(CONSTANTS.webroot, {'index':['index.html']}))
-// Restful
-.use('/me', self_modules.test)
-.use('/me2', self_modules.test2)
-// default page
-.use(self_modules.defultRoute)
-// listen port and ip
-.listen(CONSTANTS.port, host, function () {
-  console.log("server is running at port " + CONSTANTS.port);
-});
+traits.run = function run() {
+  var port = options.port || 3000;
+  var hostname = options.hostname || '';
 
-// TODO 修改部分connect源码，实现轻量级restful框架
+  if ('' === hostname) {
+    s.listen(port, function () {
+      console.log('chaoserver is running on port ' + port);
+    });
+  } else {
+    s.listen(port, hostname, function () {
+      console.log('chaoserver is running on port ' + port);
+    });
+  }
+};
+
+module.exports = chaoserver;
+
+function chaoserver() {
+  var logPath = options.logPath || './server.log';
+  var webRoot = options.webRoot || './webapp';
+  var indexPage = options.indexPage || 'index.html' ;
+
+  merge(s, traits);
+
+  return s
+    .use(logger({
+      stream: fs.createWriteStream(logPath, {
+        'flags': 'a'
+      })
+    }))
+    .use(logger('dev'))
+    .use(serveStatic(webRoot, {
+      'index': [indexPage]
+    }));
+}
