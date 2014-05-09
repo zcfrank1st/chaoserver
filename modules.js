@@ -6,7 +6,7 @@ var self_modules = module.exports;
 
 self_modules.test = function (req, res) {
   console.log(req.method);
-  res.end();
+  res.end("restful hello world");
 };
 
 self_modules.test2 = function (req, res) {
