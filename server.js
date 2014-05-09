@@ -23,3 +23,5 @@ server()
 .listen(CONSTANTS.port, host, function () {
   console.log("server is running at port " + CONSTANTS.port);
 });
+
+// TODO 修改部分connect源码，实现轻量级restful框架
