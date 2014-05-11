@@ -5,12 +5,21 @@ var serveStatic = require('serve-static');
 var merge = require('utils-merge');
 var options = require('./options');
 
+var opt, webRoot, logPath, indexPage, port, hostname;
+
 var s = server();
 var traits = {};
 
 traits.rest = function rest(method, path, fn) {
-  // TODO 处理method
-  s.use(path, fn);
+  function innerHandler (req , res) {
+    if (method === req.method){
+      res.end(fn());
+    } else {
+      throw (new Error('please check the request method!'));
+    }
+  }
+  // TODO 处理method 判断是否为get或者post请求
+  s.use(path, innerHandler);
   return s;
 };
 
@@ -20,9 +29,6 @@ traits.plus = function plus(fn) {
 };
 
 traits.run = function run() {
-  var port = options.port || 3000;
-  var hostname = options.hostname || '';
-
   if ('' === hostname) {
     s.listen(port, function () {
       console.log('chaoserver is running on port ' + port);
@@ -36,13 +42,16 @@ traits.run = function run() {
 
 module.exports = chaoserver;
 
-function chaoserver() {
-  var logPath = options.logPath || './server.log';
-  var webRoot = options.webRoot || './webapp';
-  var indexPage = options.indexPage || 'index.html' ;
-
+function chaoserver(opt) {
+  opt = opt || {};
+  logPath = opt.logPath || options.logPath;
+  webRoot = opt.webRoot || options.webRoot;
+  indexPage = opt.indexPage || options.indexPage ;
+  port = opt.port || options.port;
+  hostname = opt.hostname || options.hostname;
+  
   merge(s, traits);
-
+  
   return s
     .use(logger({
       stream: fs.createWriteStream(logPath, {
