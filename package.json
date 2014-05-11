@@ -1,0 +1,32 @@
+{
+  "name": "chaoserver",
+  "version": "0.1.0",
+  "description": "A lightweight framework based on 'connect', it's restful and easy to use.",
+  "main": "index.js",
+  "dependencies": {
+    "connect": "^3.0.0-rc.2",
+    "morgan": "^1.0.1",
+    "utils-merge": "^1.0.0",
+    "serve-static": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zcfrank1st/chaoserver.git"
+  },
+  "keywords": [
+    "lightweight",
+    "restful",
+    "framework"
+  ],
+  "author": "zcfrank1st",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zcfrank1st/chaoserver/issues"
+  },
+  "homepage": "https://github.com/zcfrank1st/chaoserver"
+}

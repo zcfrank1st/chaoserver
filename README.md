@@ -1,15 +1,43 @@
 # ChaoSErver
 
-========================
-
 ### 1) Description
 
 ChaoSErver is a tiny web framework build on `connect`, it's
 easy to use and it can integrate the middlewares which belong to `connect`.
 
 ### 2) How To Use
+Install the module like:
 
-TODO
+	npm install chaoserver
+
+Then you can init server easily like:
+
+	var server = require('chaoserver')();
+	
+or you can set your own options like:
+
+	var server = require('chaoserver')({
+	  webRoot: './webapp',
+	  logPath: './server.log',
+	  indexPage: 'index.html',
+	  port: 3000,
+	  hostname: 'localhost'
+	});
+	
+Use restful and run:
+
+	server
+	  .rest(
+	    'GET', 
+	    '/demo1',
+	    function(){ return "hello world";})
+	  .rest(
+	    'POST'
+	    '/demo2'
+	    function(){})
+	  .run();
+
+
 
 ### 3) License
 
