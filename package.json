@@ -1,6 +1,6 @@
 {
   "name": "chaoserver",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A lightweight framework based on 'connect', it's restful and easy to use.",
   "main": "index.js",
   "dependencies": {
